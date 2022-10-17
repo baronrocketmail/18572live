@@ -1,19 +1,15 @@
-import Home from "./Home";
+import Home from "./components/Home";
 import React, {createContext, useContext} from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import {
     createBrowserRouter,
     RouterProvider,
     Route,
 } from "react-router-dom";
-import Autopay from "./Autopay";
-import Log from "./Log";
-import Specific from "./Specific";
+import Autopay from "./pages/Autopay";
+import Log from "./pages/Log";
+import Specific from "./pages/Specific";
 import Root from "./Root";
-import * as PropTypes from "prop-types";
-import {ThemeContext} from "./contexts";
-
 
 const router = createBrowserRouter([
     {
@@ -43,9 +39,7 @@ export default function ContextRoot(){
 
     return(
         <>
-            <ThemeContext.Provider value="dark">
                 <RouterProvider router={router}/>
-            </ThemeContext.Provider>
         </>
     )
 

@@ -1,12 +1,12 @@
-import {fetchPropertyInfoObj, fetchUnpaidObjArray, fetchUnpaidObjArraySpecific} from "./dataFetching.mjs";
-import NavLinks from "./NavLinks";
+import {fetchPropertyInfoObj, fetchUnpaidObjArray, fetchUnpaidObjArraySpecific} from "../api/dataFetching.mjs";
+import NavLinks from "../components/NavLinks";
 import {Link, useParams} from "react-router-dom";
 import React, {useState, useEffect, useContext} from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
-import CheckoutForm from "./CheckoutForm";
-import "./App.css";
+import CheckoutForm from "../components/CheckoutForm";
+import "../styles/App.css";
 import react from "react";
 import {ThemeContext} from "@emotion/react";
 

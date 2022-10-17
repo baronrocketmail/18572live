@@ -1,6 +1,6 @@
 import react, {useState} from "react";
-import {fetchNotUnpaidObjArray, fetchPropertyInfoObj, fetchUnpaidObjArray} from "./dataFetching.mjs";
-import NavLinks from "./NavLinks";
+import {fetchNotUnpaidObjArray, fetchPropertyInfoObj, fetchUnpaidObjArray} from "../api/dataFetching.mjs";
+import NavLinks from "../components/NavLinks";
 import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';

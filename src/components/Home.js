@@ -1,4 +1,4 @@
-import {fetchPropertyInfoObj, fetchUnpaidObjArray} from "./dataFetching.mjs";
+import {fetchPropertyInfoObj, fetchUnpaidObjArray} from "../api/dataFetching.mjs";
 import NavLinks from "./NavLinks";
 import react, {useState} from "react";
 

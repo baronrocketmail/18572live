@@ -12,7 +12,7 @@ export default function Root(){
         <div>
         <Outlet/>
         <Box className={"customize-fab"} sx={{ '& > :not(style)': { m: 1 } }}>
-            <Fab variant="extended">
+            <Fab variant="extended" onClick={() => alert("customization feature coming soon!")}>
                 <EditIcon sx={{ mr: 1 }} />
                 Customize
             </Fab>

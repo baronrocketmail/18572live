@@ -18,13 +18,12 @@ const firestore = getFirestore()
 const allPaymentsCollection = collection(firestore, "/units/18572 cull canyon/payments")
 
 
-export async function fetchUnpaidObjArraySpecific() {
-    const nameStr = "deposit"
-    const allUnpaidPaymentsCollection = query(allPaymentsCollection, where("url", "==", nameStr))
+export async function fetchUnpaidObjArraySpecific(url) {
+    const allUnpaidPaymentsCollection = query(allPaymentsCollection, where("url", "==", url))
     return new Promise(function(resolve, reject) {
         getDocs(allUnpaidPaymentsCollection).then(snapshot => {
             let returnObjArry = [];
-            snapshot.docs.forEach(elem => returnObjArry.push(elem.data()))
+            snapshot.docs.forEach(elem => returnObjArry.push(elem.data()));
             resolve(returnObjArry)
         })
     })

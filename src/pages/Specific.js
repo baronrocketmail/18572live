@@ -10,10 +10,9 @@ import react from "react";
 
 const stripePromise = loadStripe("pk_live_51LlESTC3Ie0MSAM2CQtveok1BNyKHlkw8W0aVunFTMYjMAGi0y6dEaHreNGy0TC4oRkfSMwOkcXUftn0oTlwDaBg00bnHjzls6");
 
-
 export default function Specific(){
 
-    const [clientSecret, setClientSecret] = useState("pi_3Lu1a6C3Ie0MSAM21Ev8pih1_secret_4ppx8yMPRg3ty9KJupaxoUyXb");
+    const [clientSecret, setClientSecret] = useState("");
 
     const appearance = {
         theme: 'stripe',
@@ -23,16 +22,16 @@ export default function Specific(){
         appearance,
     };
 
-
     const {id} = useParams()
     const [unpaidObjArray, setUnpaidObjArray] = useState([])
 
-    const [specific, setSpecific ] = useState([{name:"", url:""}])
-
     react.useEffect(()=>{
 
-        fetchUnpaidObjArraySpecific().then(x=> {
-            setSpecific(...x);
+        fetchUnpaidObjArraySpecific(id).then(x=> {
+            setClientSecret(x[0].clientSecret);
+            console.log(x[0]);
+            console.log("client secret:" + clientSecret);
+
         });
 
         fetchUnpaidObjArray().then( unpaidObjArray => {
@@ -51,7 +50,9 @@ export default function Specific(){
 }, [])
 
     return(
+
         <div>
+
             <NavLinks objArry ={unpaidObjArray}/>
             <div className="App">
                 {clientSecret && (

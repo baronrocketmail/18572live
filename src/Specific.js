@@ -10,12 +10,12 @@ import "./App.css";
 import react from "react";
 import {ThemeContext} from "@emotion/react";
 
-const stripePromise = loadStripe("pk_test_51LlESTC3Ie0MSAM21CjKndOxCjSpqejUuXSIDiojSTvS1o7UqsZ1dI1fyHE1dgwwQecy1qPuy6j613F70wu0Z9yL00eNWxldcl");
+const stripePromise = loadStripe("pk_live_51LlESTC3Ie0MSAM2CQtveok1BNyKHlkw8W0aVunFTMYjMAGi0y6dEaHreNGy0TC4oRkfSMwOkcXUftn0oTlwDaBg00bnHjzls6");
 
 
 export default function Specific(){
 
-    const [clientSecret, setClientSecret] = useState("pi_3Lu0y9C3Ie0MSAM20Ldd7GQ3_secret_W5QgzHzschggxjm7yQTkJj5gY");
+    const [clientSecret, setClientSecret] = useState("pi_3Lu1a6C3Ie0MSAM21Ev8pih1_secret_4ppx8yMPRg3ty9KJupaxoUyXb");
 
     const appearance = {
         theme: 'stripe',

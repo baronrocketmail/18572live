@@ -5,10 +5,7 @@ import react, {useState} from "react";
 export default function Home(){
     const [unpaidObjArray, setUnpaidObjArray] = useState([])
 
-
     react.useEffect(() => {
-
-
         fetchUnpaidObjArray().then( unpaidObjArray => {
             fetchPropertyInfoObj(). then( propertyInfoObj=> {
                 var objArray = [];

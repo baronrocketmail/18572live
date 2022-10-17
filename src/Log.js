@@ -33,7 +33,7 @@ export default function Log(){
             <NavLinks objArry = {unpaidObjArray}/>
 
             <BasicTable/>
-            <Button className={"cbtn"} variant="text">Primary</Button>
+            <Button className={"cbtn"} variant="text">Customize</Button>
         </div>
     )
 }

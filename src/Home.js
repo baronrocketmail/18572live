@@ -31,7 +31,7 @@ export default function Home(){
         <NavLinks objArry = {unpaidObjArray}/>
             <Box className={"customize"} sx={{ '& > :not(style)': { m: 1 } }}>
                 <Fab variant="extended">
-                    <NavigationIcon sx={{ mr: 1 }} />
+                    <EditIcon sx={{ mr: 1 }} />
                     Customize
                 </Fab>
             </Box>

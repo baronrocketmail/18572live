@@ -10,6 +10,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 export default function Log(){
     const [unpaidObjArray, setUnpaidObjArray] = useState([])
@@ -31,6 +33,7 @@ export default function Log(){
             <NavLinks objArry = {unpaidObjArray}/>
 
             <BasicTable/>
+            <Button className={"cbtn"} variant="text">Primary</Button>
         </div>
     )
 }

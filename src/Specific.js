@@ -28,7 +28,7 @@ export default function Specific(){
                 setUnpaidObjArray(objArray);
             }
         );
-})
+}, [])
 
     return(
         <div>

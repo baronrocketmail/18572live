@@ -16,8 +16,7 @@ export default function Home(){
             })
             }
         );
-        console.log(unpaidObjArray)
-    })
+    }, [])
 
 
     return(

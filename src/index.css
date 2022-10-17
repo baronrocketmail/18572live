@@ -6,10 +6,11 @@ a{
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     position: static;
 }
-.navlinks{
+.nlinks{
+    margin-top: 25vhgit;
     text-align: center;
     position: relative;
-    top: 25vh;
+
 }
 
 p{
@@ -23,7 +24,7 @@ p{
     margin-top: 6px;
 }
 
-.customize{
+.customize-fab{
     position: fixed;
     right: 10px;
     bottom: 10px;

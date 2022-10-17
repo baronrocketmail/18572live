@@ -10,24 +10,30 @@ import {
 import Autopay from "./Autopay";
 import Log from "./Log";
 import Specific from "./Specific";
+import Root from "./Root";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home/>,
+        element: <Root/>,
+        children: [
+            { index: true, element: <Home /> },
+
+            {
+                path: "/autopay",
+                element: <Autopay/>
+            },
+            {
+                path: "/log",
+                element: <Log/>
+            },
+            {
+                path: "/:id",
+                element: <Specific/>
+            }
+        ]
     },
-    {
-        path: "/autopay",
-        element: <Autopay/>
-    },
-    {
-        path: "/log",
-        element: <Log/>
-    },
-    {
-        path: "/:id",
-        element: <Specific/>
-    }
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

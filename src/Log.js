@@ -29,6 +29,7 @@ export default function Log(){
     return(
         <div>
             <NavLinks objArry = {unpaidObjArray}/>
+
             <BasicTable/>
         </div>
     )

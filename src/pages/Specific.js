@@ -4,11 +4,9 @@ import {Link, useParams} from "react-router-dom";
 import React, {useState, useEffect, useContext} from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-
 import CheckoutForm from "../components/CheckoutForm";
 import "../styles/App.css";
 import react from "react";
-import {ThemeContext} from "@emotion/react";
 
 const stripePromise = loadStripe("pk_live_51LlESTC3Ie0MSAM2CQtveok1BNyKHlkw8W0aVunFTMYjMAGi0y6dEaHreNGy0TC4oRkfSMwOkcXUftn0oTlwDaBg00bnHjzls6");
 

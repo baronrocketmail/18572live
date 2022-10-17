@@ -7,6 +7,9 @@ import {
     RouterProvider,
     Route,
 } from "react-router-dom";
+import Autopay from "./Autopay";
+import Log from "./Log";
+import Specific from "./Specific";
 
 const router = createBrowserRouter([
     {
@@ -15,15 +18,15 @@ const router = createBrowserRouter([
     },
     {
         path: "/autopay",
-        element: <h1>ds</h1>
+        element: <Autopay/>
     },
     {
         path: "/log",
-        element: <h1>log</h1>
+        element: <Log/>
     },
     {
         path: "/:id",
-        element: <h1>specific</h1>
+        element: <Specific/>
     }
 ]);
 

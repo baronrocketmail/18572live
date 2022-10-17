@@ -15,7 +15,7 @@ const stripePromise = loadStripe("pk_test_51LlESTC3Ie0MSAM21CjKndOxCjSpqejUuXSID
 
 export default function Specific(){
 
-    const [clientSecret, setClientSecret] = useState("pi_3Lu0NRC3Ie0MSAM21o4MBDIk_secret_GxAJ3snfPBgzd0PekSvhySMk9");
+    const [clientSecret, setClientSecret] = useState("pi_3Lu0y9C3Ie0MSAM20Ldd7GQ3_secret_W5QgzHzschggxjm7yQTkJj5gY");
 
     const appearance = {
         theme: 'stripe',
@@ -33,20 +33,10 @@ export default function Specific(){
 
     react.useEffect(()=>{
 
-
-        // Create PaymentIntent as soon as the page loads
-        fetch("/api/create-payment-intent", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
-        })
-            .then((res) => res.json())
-            .then((data) => setClientSecret(data.clientSecret));
-
-
         fetchUnpaidObjArraySpecific().then(x=> {
             setSpecific(...x);
         });
+
         fetchUnpaidObjArray().then( unpaidObjArray => {
                 var objArray = [];
                 objArray.push(...[{name: "<-----", url: "/"}, {name: "", url: "/autopay"}]);
@@ -61,8 +51,6 @@ export default function Specific(){
             }
         );
 }, [])
-
-
 
     return(
         <div>

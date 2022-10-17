@@ -52,7 +52,7 @@ function BasicTable() {
     }, [])
 
     return (
-        <TableContainer component={Paper}>
+        <TableContainer className={"table"} component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableBody>
                     {rows.map((row) => (

@@ -4,29 +4,23 @@ a{
     font-size: 9vmin;
     letter-spacing: -.005em;
     position: static;
-    line-height: 1.47059;
+    line-height: 1.25;
     font-weight: 400;
     letter-spacing: -.022em;
     font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: #1d1d1f;
     font-style: normal;
 }
+
 .nlinks{
-    margin-top: 22vh;
+    margin-top: 23vh;
     text-align: center;
     position: relative;
 
 }
 
-p{
-    text-align: center;
-    color: dodgerblue;
-    font-size: 28px;
-    line-height: 1.10722;
-    font-weight: 400;
-    letter-spacing: .004em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    margin-top: 6px;
+a:hover{
+    color:grey;
 }
 
 .customize-fab{
